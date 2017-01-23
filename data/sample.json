@@ -1,0 +1,15 @@
+{
+    "@origin": "github.com/nakosung/trainer",
+    "data" : {
+        "@origin": "github.com/nakosung/processor",
+        "@args": ["--datadir /data --outdir $out"],
+        "data": {
+            "@origin": "github.com/nakosung/data-source",
+            "@args": "--outdir $out"
+        },
+        "normalize": [true,false]
+    },
+    "iter": 3000,
+    "dropout": [true,false],
+    "learning-rate": [0.2,0.5,{"cont":"log"}]
+}
