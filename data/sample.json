@@ -1,11 +1,15 @@
 {
+    "@image": "trainer",
     "@origin": "github.com/nakosung/trainer",
     "data" : {
+        "@image": "preprocessor",
         "@origin": "github.com/nakosung/processor",
         "@args": ["--datadir /data --outdir $out"],
         "data": {
-            "@origin": "github.com/nakosung/data-source",
-            "@args": "--outdir $out"
+            "@image": "source",
+            "@origin": "github.com/nakosung/data-source",            
+            "@args": "--outdir $out",
+            "node": "my-node-1"
         },
         "normalize": [true,false]
     },
